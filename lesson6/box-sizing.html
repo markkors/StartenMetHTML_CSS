@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box sizing</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<!-- zonder deze box-sizing: border-box is deze box1 nu 120px breed en 120px hoog
+ dat is dus inclief de breedte van de rand aan de linker- en rechterzijde -->
+<div class="box1"></div>
+<!-- met deze box-sizing: border-box is deze box2 nu 100px breed en 100px hoog
+ dat is dus exclusief de breedte van de rand aan de linker- en rechterzijde -->
+<div class="box2"></div>
+</body>
+</html>
