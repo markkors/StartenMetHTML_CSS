@@ -6,13 +6,48 @@
     <style>
         .tekst1 {
             text-align: center;
+            border: 1px solid black;
         }
+
+        .rand {
+            border: 1px solid black;
+        }
+
+        .center_block {
+            margin: 0 auto;
+            width: 50%;
+            border:  1px solid black;
+            text-align: center;
+        }
+
+
+
+        .center_inline {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-<div>
-    <span class="tekst1">Dit is een test</span>
-</div>
 
+
+<div class="tekst1 rand">Dit is een test</div>
+<br>
+<br>
+<div class="center_block">block level in het midden met een breedte van 50%</div>
+
+<div class="center_inline">
+    <div>
+        <span >Dit is een inline-element</span>
+    </div>
+    <div>
+        <img src="http://placehold.it/350x150" alt="placeholder image">
+    </div>
+    <div>
+        <a href="http://test.nl">Dit is een link</a>
+    </div>
+</div>
 </body>
 </html>
