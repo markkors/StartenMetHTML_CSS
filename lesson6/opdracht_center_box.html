@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Center a box</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .parent {
+      display: flex;
+      align-items: center;
+      width: 350px;
+      height: 350px;
+      display: flex;
+      border: 1px solid black;
+    }
+
+    .box {
+      margin:0 auto;
+      border: 1px solid black;
+      padding: 20px;
+
+    }
+
+    .box:nth-child(1) { background-color: red}
+    .box:nth-child(2) { background-color: green}
+    .box:nth-child(3) { background-color: blue}
+    .box:nth-child(4) { background-color: yellow}
+
+    </style>
+</head>
+<body>
+
+<div class="parent">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+</div>
+
+</body>
+</html>

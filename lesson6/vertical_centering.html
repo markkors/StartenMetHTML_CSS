@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Center elements vertical</title>
+    <style>
+        .vertical-center-inline {
+            margin: 50px;
+        }
+
+        .vertical-center-inline > * {
+            padding: 40px;
+            border:1px solid black;
+        }
+
+        .vertical-center-line-height {
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .vertical-center-table {
+            display: table;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .vertical-center-table > div {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .vertical-center-flex {
+            display: flex;
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="vertical-center-inline">
+    <span>Hello</span>
+    <a href="#0">We're</a>
+    <a href="#0">Centered</a>
+    <a href="#0">Bits of</a>
+    <a href="#0">Text</a>
+</div>
+
+
+<div class="vertical-center-line-height">
+    I'm centered!
+</div>
+<br>
+<div class="vertical-center-table">
+    <div>Dit is een vertikaal en horizontaal gecentreerde tekst</div>
+</div>
+<br>
+<div class="vertical-center-flex">
+    <div>Dit is een vertikaal en horizontaal gecentreerd item met flexbox</div>
+</div>
+
+</body>
+</html>
