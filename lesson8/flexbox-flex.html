@@ -6,8 +6,6 @@
     <style>
         .flex-container {
             display: flex;
-            flex-direction: column;
-            height: 250px;
             border: 1px solid black;
         }
 
@@ -15,11 +13,19 @@
             background-color: cornflowerblue;
             margin: 10px;
             height: 100px;
-            width: 100px;
+            width: 200px;
         }
 
-        .flex-item {
-            flex: 1;
+        .flex-item:nth-child(1) {
+            flex:auto;
+        }
+
+        .flex-item:nth-child(2) {
+            flex:auto;
+        }
+
+        .flex-item:nth-child(3) {
+            flex:auto;
         }
     </style>
 </head>
