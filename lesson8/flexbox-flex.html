@@ -6,25 +6,20 @@
     <style>
         .flex-container {
             display: flex;
+            flex-direction: column;
+            height: 250px;
+            border: 1px solid black;
         }
 
         .flex-item {
             background-color: cornflowerblue;
-            width: 100px;
-            height: 100px;
             margin: 10px;
+            height: 100px;
+            width: 100px;
         }
 
-        .flex-item:nth-child(1) {
-            order: 2;
-        }
-        flexbox.html
-        .flex-item:nth-child(2) {
-            order: 1;
-        }
-
-        .flex-item:nth-child(3) {
-            order: 3;
+        .flex-item {
+            flex: 1;
         }
     </style>
 </head>
