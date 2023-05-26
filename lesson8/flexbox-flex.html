@@ -17,15 +17,15 @@
         }
 
         .flex-item:nth-child(1) {
-            flex:auto;
+            flex:1 0 50px;
         }
 
         .flex-item:nth-child(2) {
-            flex:auto;
+            flex-grow:1;
         }
 
         .flex-item:nth-child(3) {
-            flex:auto;
+            flex-grow:1
         }
     </style>
 </head>
@@ -37,6 +37,12 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
 </div>
+
+<script>
+    let flexitem1 = document.querySelector('.flex-container .flex-item:nth-child(1)');
+    alert(flexitem1.offsetWidth);
+
+</script>
 
 </body>
 </html>
