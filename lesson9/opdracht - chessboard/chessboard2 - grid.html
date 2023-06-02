@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #chessboard {
+      width: 600px;
+      height: 600px;
+      display: grid;
+      grid-template-rows: repeat(9, 1fr);
+      gap: 2px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 2px;
+    }
+
+    .row > div {
+      border: 1px solid black;
+    }
+
+    .label {
+      background-color: lightgray;
+      text-align: center;
+      font-size: 20px;
+      line-height: 70px;
+    }
+
+    .row:nth-child(odd) > div:nth-child(odd):not(.label) {
+      background-color: white;
+    }
+
+    .row:nth-child(odd) > div:nth-child(even):not(.label) {
+      background-color: black;
+    }
+
+    .row:nth-child(even) > div:nth-child(odd):not(.label) {
+      background-color: black;
+    }
+
+    .row:nth-child(even) > div:nth-child(even):not(.label) {
+      background-color: white;
+    }
+
+  </style>
+</head>
+<body>
+<div id="chessboard">
+  <div class="row">
+    <div></div>
+    <div class="label">A</div>
+    <div class="label">B</div>
+    <div class="label">C</div>
+    <div class="label">D</div>
+    <div class="label">E</div>
+    <div class="label">F</div>
+    <div class="label">G</div>
+    <div class="label">H</div>
+  </div>
+
+  <div class="row">
+    <div class="label">8</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row">
+    <div class="label">7</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div class="row">
+    <div class="label">6</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div class="row">
+    <div class="label">5</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div  class="row">
+    <div class="label">4</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div  class="row">
+    <div class="label">3</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div  class="row">
+    <div class="label">2</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div  class="row">
+    <div class="label">1</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</div>
+
+</body>
+</html>

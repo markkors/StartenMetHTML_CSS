@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    gap: 20px;
+}
+
+
+
+.profile {
+    grid-area: header;
+    background-color: #eaeaea;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.profile-photo {
+
+    height:150px;
+    object-fit: cover;
+}
+
+.bio {
+    grid-area: sidebar;
+    background-color: #eaeaea;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.projects {
+    grid-area: content;
+    background-color: #eaeaea;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.product-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #eaeaea;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
