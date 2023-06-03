@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Peroonsgegevens</legend>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">E-mailadres:</label>
+        <input type="email" id="email" name="email">
+        <label for="password">Wachtwoord:</label>
+        <input type="password" id="password" name="password">
+    </fieldset>
+
+    <fieldset>
+        <legend>Betaalgegevens</legend>
+        <label for="ideal">Ideal</label>
+        <input type="radio" id="ideal" name="paymentmethod" value="ideal">
+        <label for="paypal">paypal</label>
+        <input type="radio" id="paypal" name="paymentmethod" value="paypal">
+        <label for="cc">creditcard</label>
+        <input type="radio" id="cc" name="paymentmethod" value="creditcard">
+    </fieldset>
+
+    <fieldset>
+        <legend>Terms</legend>
+        <label for="terms">Ik ga akkoord met de algemene voorwaarden</label>
+        <input type="checkbox" id="terms" name="terms" value="agree">
+        <label for="nieuwsbrief">Ik wil de nieuwsbrief ontvangen</label>
+        <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief" value="agree">
+    </fieldset>
+
+    <button>stuur</button>
+
+
+    <label for="kleur">Kleur:</label>
+    <input type="color" id="kleur" name="kleur">
+    <br>
+    <br>
+    <label for="note">Notitie</label>
+    <textarea id="note" name="note" rows="4" cols="50"></textarea>
+
+
+    <label for="country">Land:</label>
+    <select id="country" name="country">
+        <option value="0">Verenigde Staten</option>
+        <option value="1">Canada</option>
+        <option value="2" selected>Mexico</option>
+    </select>
+    <input type="submit" name="submit" value="Verstuur">
+
+</form>
+</body>
+</html>
