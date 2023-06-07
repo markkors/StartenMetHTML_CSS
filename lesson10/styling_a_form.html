@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 5px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border-color: yellow;
+            background-color: lime;
+        }
+
+        input::placeholder {
+            color: red;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="first" placeholder="enter your name">
+
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+
+        <input type="submit" name="submit" value="verstuur">
+    </form>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formData = new FormData(event.target);
+        fetch('submit_form.php', {method: 'POST', body: formData})
+            .then(response => response.json())
+            .then(data => console.log(data));
+    });
+
+</script>
+</body>
+</html>
