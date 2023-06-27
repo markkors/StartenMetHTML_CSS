@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3 kolom layout met grid</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: arial, helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        /* mobile */
+        main {
+            margin: 0px;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-areas:
+				"header"
+				"content"
+				"related"
+				"ads"
+				"footer";
+        }
+
+        /* alle directe child elementen in main */
+        main > * {
+            border: 2px solid green;
+            background-color: #ffec99;
+            padding: 5px;
+        }
+
+        .main-header {
+            grid-area: header;
+            height: 10vh;
+        }
+
+        .main-content {
+            grid-area: content;
+            height: 60vh;
+
+        }
+
+        .related-links {
+            grid-area: related;
+            height: 10vh;
+        }
+
+        .ads {
+            grid-area: ads;
+            height: 10vh;
+        }
+
+        .main-footer {
+            grid-area: footer;
+            height: 10vh;
+        }
+
+        /* tablet */
+        @media (min-width: 500px) {
+            html {
+                overflow: hidden;
+            }
+
+            main {
+                grid-template-columns: repeat(3,1fr);
+                grid-template-areas:
+				"header header header"
+				"content content related"
+				"content content ads"
+				"footer footer footer";
+            }
+            .related-links, .ads {
+                height: 40vh;
+            }
+            .main-content {
+                height: 80vh;
+            }
+        }
+
+        /* desktop */
+        @media (min-width: 800px) {
+            html {
+                overflow: hidden;
+            }
+            main {
+                grid-template-columns:  repeat(4,1fr);
+                grid-template-areas:
+				"header header header header"
+				"related content content ads"
+				"footer footer footer footer";
+            }
+
+            .main-content, .related-links, .ads {
+                height: 80vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <header class="main-header">
+        Header
+    </header>
+    <article class="main-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula lorem, gravida sit amet ipsum a, dictum gravida dolor. Phasellus nisi elit, commodo at feugiat at, malesuada nec eros. Integer dignissim nec nulla id cursus. Nam commodo ligula lorem, eget tempus velit vehicula non. Nunc eget sagittis ex. Nulla eu ex faucibus.
+    </article>
+    <aside class="related-links">
+        Related Links
+    </aside>
+    <aside class="ads">
+        Ads
+    </aside>
+    <footer class="main-footer">
+        Footer
+    </footer>
+</main>
+</body>
+</html>
