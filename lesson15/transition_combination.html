@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: background-color 5s, transform 2s ease-in-out;
+    }
+
+    .box:hover {
+        transform: rotate(180deg) scale(2);
+        background-color: blue;
+    }
+  </style>
+
+</head>
+<body>
+<div class="box">box</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- voeg een link naar de fontawesome library toe -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+  .box i {
+    font-size: 200px;
+    color: red;
+    animation: myAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes myAnimation {
+    from {
+      color: red;
+      transform: scale(1);
+    }
+    50% {
+      color: lightcoral;
+      transform: scale(1.5);
+    }
+    to {
+      color: red;
+      transform: scale(1);
+    }
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
+</head>
+
+<body>
+<div class="box">
+  <i class="fas fa-heart"></i>
+</div>
+</body>
+</html>
